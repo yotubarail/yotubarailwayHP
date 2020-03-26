@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  background-color: #ffffe0;
+  padding-top: 4.75rem;
+}
+
+
+h1 {
+  font-size: 35px;
+}
+
+/* header */
+  #logo {
+  width: 80px;
+  height: 60px;
+}
+
+header nav {
+  background-color: #9aff9a;
+}
+
+.nav-item {
+  margin-right: 70px;
+}
+
+.nav-link {
+  font-size: 23px;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active,
+header nav ul li.current a {
+  background-color: #ffffe0;
+}
+
+
+/* main */
+main {
+  background:rgba(255, 255, 255, 0.8);
+}
+
+main:before{
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100%;
+  height:100vh;
+  background:url(../img/Fuji.JPG) center no-repeat;
+  background-size:cover;
+}
+
+main h1 {
+  border-bottom: 3px solid #eead0e;
+  border-left: 10px solid #eead0e;
+}
+
+table th {
+  background-color: lightyellow;
+  padding: 20px;
+  border: 2px solid;
+  width: 10rem;
+}
+
+table td {
+  padding: 20px;
+  border: 2px solid;
+  width: 80rem;
+}
+
+table li {
+  list-style: none;
+}
+
+/* originのlistをずらす */
+.origin li {
+  margin-left: 1em;
+  text-indent: -0.5em;
+}
+
+.note {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+/* footer */
+footer{
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #614226;
+}
+
+footer ul{
+  margin-bottom: 20px;
+  margin-left: 0 10px;
+}
+
+footer ul li {
+  display: inline;
+  margin-left: 0 10px;
+}
+
+footer ul li a {
+  color: #fff;
+}
+
+footer ul li a:link {
+  text-decoration: none;
+}
+
+footer ul li a:hover,
+footer ul li a:active {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+@media screen and (max-width:767px) {
+    /*　画面サイズが767px以下の場合読み込む　*/
+    p {
+      font-size: 15px;
+    }
+
+
+    footer li {
+      font-size: 12px;
+    }
+
+  }
+
+@media screen and (max-width:1024px) {
+  .nav-link{
+    font-size: 15px;
+  }
+}

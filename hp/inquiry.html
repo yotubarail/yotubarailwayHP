@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+ <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta property="og:type" content="website"/>
+   <meta property="og:url" content=""/>
+   <meta property="og:title" content=""/>
+   <meta property="og:site_name" content=""/>
+   <meta property="og:image" content="https://st2121.web.fc2.com/favicon.png"/>
+   <meta name="twitter:card" content="summary"/>
+   <link rel="icon" href="favicon.ico">
+   <title>四葉鉄道お問い合わせ</title>
+   <link rel="stylesheet" href="css/reset.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <link rel="stylesheet" href="css/inquiry.css">
+ </head>
+
+ <body>
+   <!-- Boorstrap -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <!-- Bootstrap end -->
+    <header>
+     <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+       <a href="index.html"><img src="https://st2121.web.fc2.com/favicon.png" alt="四葉鉄道" id="logo"></a>
+       <!-- ハンバーガーメニューの表示 -->
+       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+       </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a href="zaiseki.html" class="nav-link">所属車両</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">路線情報</a>
+          </li>
+          <li class="nav-item">
+            <a href="https://www.yotubarail.work" target="_blank" class="nav-link">ブログ</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">広報担当の部屋</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">リンク</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+   </header>
+   <main class="container">
+     <div class="text-center">
+       <h1>お問い合わせ</h1>
+       <p>感想やちょっとした質問などなんでもどうぞ。内容を確認でき次第返信させていただきます。</p>
+       <p style="color:#f00;">※必須</p>
+     </div>
+     <div id="formWrapper" class="mb-5">
+       <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdGm8fhW-0-AhyoUPg5c9rBlpyj5klHlrZpxPf44jgzJk35cw/formResponse" method="post" name="myForm" target="dummyIframe">
+         <div class="form-group">
+           <h2>メールアドレス<span>※</span></h2>
+           <input type="mail" class="form-control" id="mail" name="emailAddress" placeholder="mail@example.com" required>
+         </div>
+         <div class="form-group">
+           <h2>お名前(ニックネーム可)<span>※</span></h2>
+           <input type="text" class="form-control" id="name" name="entry.1987797232" placeholder="四葉 太郎" required>
+         </div>
+         <div class="form-group ">
+           <h2>お問い合わせ項目</h2>
+           <ul>
+             <li class="pb-2"><input type="radio" name="entry.1302079128" value="ブログについて" id="homepage"><label for="homepage" class="pl-2">ブログについて</label></li>
+             <li class="pb-2"><input type="radio" name="entry.1302079128" value="ホームページについて" id="blog"><label for="blog" class="pl-2">ホームページについて</label></li>
+             <li class="pb-2"><input type="radio" name="entry.1302079128" value="その他" id="other"><label for="other" class="pl-2">その他</label></li>
+           </ul>
+         </div>
+         <div class="form-group">
+           <h2>お問い合わせ内容<span>※</span></h2>
+           <textarea id="message" class="form-control" name="entry.1962979988" placeholder="質問やご要望について" required rows="5" cols="40"></textarea>
+         </div>
+         <div class="button text-center">
+           <input class="btn btn-success" type="submit" value="送信" onclick="submitForm()">
+         </div>
+       </form>
+       <iframe name="dummyIframe" style="display:none;"></iframe>
+     </div>
+     <div id="thxMessage" class="text-center" style="display:none;"><h2>お問い合わせありがとうございました。</h2></div>
+     <script>
+       function submitForm(){
+         var val=document.getElementsByName("emailAddress")[0];
+         if (val.value.length == 0) {
+           alert("メールアドレスは必須項目です");
+           val.focus();
+           return;
+         }
+         var flag = 0;
+           if(!document.myForm.emailAddress.value.match(/.+@.+\..+/)){
+              flag = 1;
+            }
+              if(flag){
+                  window.alert("メールアドレスが正しくありません");
+                    return
+                    }
+         var val=document.getElementsByName("entry.1987797232")[0];
+         if (val.value.length == 0) {
+           alert("お名前は必須項目です");
+           val.focus();
+           return;
+         }
+         var val=document.getElementsByName("entry.1962979988")[0];
+         if (val.value.length == 0) {
+           alert("お問い合わせ内容は必須項目です");
+           val.focus();
+           return;
+         }
+         document.myForm.submit();
+         document.getElementById('formWrapper').style.display = 'none';
+         document.getElementById('thxMessage').style.display = 'block';
+       }
+     </script>
+   </main>
+   <footer>
+     <ul>
+       <li><a href="index.html">ホーム</a></li>
+       <li><a href="shasoku.html">会社概要</a></li>
+       <li><a href="#">採用情報（準備中）</a></li>
+       <li><a href="#">お問い合わせ</a></li>
+     </ul>
+     <small>&copy; 2019 Yotubarailway inc.</small>
+   </footer>
+ </body>
+</html>

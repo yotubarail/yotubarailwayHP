@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  background-color: #FFFFE0;
+  padding-top: 5rem;
+}
+
+
+
+/* header */
+  #logo {
+  width: 80px;
+  height: 60px;
+}
+
+header nav {
+  background-color: #9AFF9A;
+}
+
+.nav-item {
+  margin-right: 70px;
+}
+
+.nav-link {
+  font-size: 23px;
+}
+
+header nav ul li a:hover,
+header nav ul li a:active,
+header nav ul li.current a {
+  background-color: #FFFFE0;
+}
+
+/* main */
+
+section img {
+  width: 100%;
+}
+
+/* footer */
+footer{
+  padding: 15px;
+  text-align: center;
+  color: #fff;
+  background-color: #614226;
+}
+
+footer ul{
+  margin-bottom: 20px;
+  margin-left: 0 10px;
+}
+
+footer ul li {
+  display: inline;
+  margin-left: 0 10px;
+}
+
+footer ul li a {
+  color: #fff;
+}
+
+footer ul li a:link {
+  text-decoration: none;
+}
+
+footer ul li a:hover,
+footer ul li a:active {
+  text-decoration: underline;
+  color: #fff;
+}
+
+
+@media screen and (max-width:767px) {
+    /*　画面サイズが767px以下の場合読み込む　*/
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    footer li {
+      font-size: 0.75rem;
+    }
+
+  }
+
+  @media screen and (max-width:1024px) {
+    .nav-link{
+      font-size: 1rem;
+    }
+  }
