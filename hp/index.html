@@ -18,10 +18,11 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   </head>
   <body>
     <!-- Boorstrap -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <!-- Bootstrap end -->
@@ -42,16 +43,13 @@
               <a href="zaiseki.html" class="nav-link">所属車両</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">路線情報</a>
+              <a href="https://st2121.web.fc2.com/newdir/untenkaitop.html" class="nav-link">路線情報</a>
             </li>
             <li class="nav-item">
               <a href="https://www.yotubarail.work" target="_blank" class="nav-link">ブログ</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">広報担当の部屋</a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">リンク</a>
+              <a href="https://www.youtube.com/user/strailway/" target="_blank" class="nav-link">チャンネル</a>
             </li>
           </ul>
         </div>
@@ -67,7 +65,7 @@
           <p>ご夫婦でのんびりとした2泊3日の旅</p>
           <p>気の知れた仲間たちではしゃぎ回る日帰り旅</p>
           <p>そんな『なんでもあり』を四葉鉄道で味わいませんか。</p>
-          <p>ご希望があればお客様ごとのオリジナルツアーをご案内致します。</p>
+          <p>お客様ごとのオリジナルツアーをご案内致します。</p>
         </div>
         <video src="img/1080p.mp4" autoplay loop muted class="sp-none">
         </video>
@@ -83,9 +81,9 @@
           <h1 class="pb-3">Works</h1>
           <p>弊社は鉄道を用いた運輸事業に主に取り組んでいます。</p>
           <p>通常の運行に加え、観光列車も積極的に運行しております。</p>
-          <p>今後はさらなる路線の延長と地域の発展に尽くしてまいります。</p>
+          <p>今後はさらなる路線の延長と車両の増備・地域の発展に尽くしてまいります。</p>
         </div>
-        <div class="container row mx-auto n-scale">
+        <div class="container row mx-auto n-scale animated" data-animate="fadeInRight">
           <div class="col-6">
             <img src="https://via.placeholder.com/500x375" alt="Nゲージイメージ">
           </div>
@@ -97,7 +95,7 @@
             <p class="responsive-none">また他社への乗り入れも可能になっており、今後さらに発展する見込みです。</p>
           </div>
         </div>
-        <div class="container row mx-auto g-scale mt-5">
+        <div class="container row mx-auto g-scale mt-5 animated" data-animate="fadeInLeft">
           <div class="col-6">
             <h2>Gゲージ</h2>
             <p>ナローゲージと呼ばれる普通の鉄道より線路幅の狭い鉄道です。</p>
@@ -108,6 +106,33 @@
           </div>
         </div>
       </section>
+      <script>
+      $(window).on('load scroll', function(){
+
+        //animatedのclassを持った要素をセレクタに指定
+        var elem = $('.animated');
+
+        elem.each(function () {
+
+          //data属性からアニメーション名を取得
+          var isAnimate = $(this).data('animate');
+          //animated要素に位置を取得
+          var elemOffset = $(this).offset().top;
+          //現在のスクロールポジションを取得
+          var scrollPos = $(window).scrollTop();
+          //ウィンドウの高さを取得
+          var wh = $(window).height();
+
+          //animated要素がウィンドウ内の中央位置にきたら処理
+          if(scrollPos > elemOffset - wh + (wh / 10)){
+            $(this).addClass(isAnimate);
+          }else{
+            $(this).removeClass(isAnimate);
+          }
+        });
+
+      });
+      </script>
     </main>
 
     <footer>
